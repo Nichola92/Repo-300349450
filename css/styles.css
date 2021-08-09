@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+
+
+body
+{
+    background-color: white;
+}
+
+header
+{
+    background-color: white
+    /* height: 50px; */
+    /* padding-bottom: 10px; */
+}
+
+nav{
+    background-color: rgb(213, 223, 210);
+    display: flex;
+    font-family: fantasy;
+    
+    
+}
+
+
+nav div
+{
+    background-color: white;
+	text-align: center;
+	font-size: 1em;
+	line-height: 3em;
+	list-style-type: none;
+    border-radius: 2px;
+    color: black;
+
+}
+
+
+
+a:hover {
+    color: rgb(126, 126, 196);
+
+}
+
+a:active {
+    color: rgb(126, 126, 196);
+  }
+  
+  
+a:link {
+    text-decoration: none;
+}
+
+div.profile
+{
+    display: flex;
+    background-color: rgb(224, 220, 220);
+    color: rgb(47, 71, 47);
+}
+
+
+div.portfolio
+{
+    display: flex;
+    background-color:white
+  
+}
+  
+div.contact
+{
+    display: flex;
+    background-color: rgb(224, 220, 220);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+div.contact a
+{
+   
+    text-align: center;
+    color: gray;
+    /* margin-left: 60px; */
+}
+
+div.contact h3
+{
+    color: black;
+}
+
+footer
+{
+    display: flex;
+    background-color: rgb(224, 220, 220);
+    height: 50px;
+}
+
+p,h1,h2,h3
+{
+    text-align: center;
+
+}
+
+h3
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+	Mobile Devices: 0 - 320 pixels
+   ============================================
+*/
+
+@media only screen and (max-width: 320px)
+{
+    nav
+    {
+        flex-direction: column;
+        justify-content: center;
+        /* height: 180px; */
+        min-width: 100px;
+        padding-top: 10px;
+    }
+
+    nav div
+    {       
+        margin: 4px;
+        flex: 1 1 auto;
+    } 
+
+    div.profile
+    {
+ 
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    img.profile-img
+    {
+
+        flex: 1 1 auto;       
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    div.profile p
+    {
+        flex: 2 1 auto;       
+
+    }
+
+    div.portfolio
+    {
+        flex-direction: column;
+
+    }
+
+    img.portfolio
+    {
+        flex: 1 1 auto;    
+
+    }
+
+
+    div.contact
+    {
+      flex: 1 1 auto; 
+      flex-direction: column;  
+    }
+
+    
+    footer a
+    {
+        flex: 1 1 auto;
+        justify-content: space-between;
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width:768px)
+{
+    nav
+    {
+
+        /* width: 500px; */
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    nav div
+    {
+        flex-direction: row;
+        flex: 1 1 auto;
+        background-color: rgb(224, 220, 220);
+
+    }
+
+    h1
+    {
+        text-align: center;
+    }
+
+    h3
+    {
+        text-align: center;
+
+    }
+
+    div.profile
+    {
+        flex-direction: row-reverse;
+        padding-top: 20px;
+
+    }
+
+    div.profile p
+    {
+        flex: 4 1 auto;
+        text-align: left;       
+        margin-left: 50px;
+
+    }
+
+    img.profile-img
+    {
+        flex: 1 1 auto;
+        width:200px;
+        height: 120px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+
+
+    }
+
+    div.aside
+    {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div.portfolio
+    {
+        flex: 1 1 auto;
+        flex-direction: column;
+        flex-wrap: wrap;      
+        min-width: 50px;
+        margin-left: 30px; 
+        /* max-width:200px;*/
+
+    
+    }
+
+
+    div.portfolio p, div.portfolio h3
+    {
+        flex: 1 1 auto;
+        text-align: center; 
+        word-wrap: break-word;
+        max-width:300px;
+        margin-left: 0px;
+
+    }
+
+    img.portfolio
+    {
+        flex: 2 1 50px;
+        /* min-width: 50px; */
+        max-width:300px;
+
+
+    }
+
+    div.contact
+    {
+      flex: 1 1 auto; 
+      flex-direction: column;  
+    }
+
+    
+    footer a
+    {
+        flex: 1 1 auto;
+        justify-content: stretch;
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+    
+}
+
+/* ===================================================
+	Desktop Devices: Less than 768 pixels
+   ===================================================
+*/
+
+@media only screen and (min-width: 769px)
+{
+    nav
+    {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    nav div
+    {
+        flex-direction: row;
+        flex: 1 1 auto;
+        background-color: rgb(224, 220, 220);
+
+    }
+
+    div.profile
+    {
+        flex-direction: row-reverse;
+        padding-top: 20px;
+    }
+
+    div.profile p
+    {
+        flex: 4 1 auto;
+        text-align: left;       
+        margin-left: 50px;
+        /* font-size: 20px; */
+
+    }
+
+    img.profile-img
+    {
+        flex: 1 1 auto;
+        width:200px;
+        height: 120px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+
+    }
+
+    div.aside
+    {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    div.portfolio
+    {
+        flex: 1 1 auto;
+        flex-direction: column;
+        flex-wrap: wrap;       
+
+    
+    }
+
+
+    div.portfolio p, div.portfolio h3
+    {
+        flex: 1 1 auto;
+        text-align: left; 
+        word-wrap: break-word;
+        max-width:200px;
+        margin-left: 0px;
+
+    }
+
+    img.portfolio
+    {
+        flex: 1 1 auto;
+        /* min-width: 50px; */
+        max-width:200px;
+
+
+    }
+
+    div.contact
+    {
+      flex: 1 1 auto; 
+      flex-direction: column;  
+    }
+
+    
+    footer a
+    {
+        flex: 1 1 auto;
+        justify-content: stretch;
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}

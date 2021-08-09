@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      
+        Author: Nichola Muthuarachchi
+        Filename:   index.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>My Portfolio</title>
+   <link href="css/styles.css" rel="stylesheet" /> 
+   <link href="css/modal.css" rel="stylesheet" /> 
+   <script src="script/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="StudentName"> Student Name</h1>      
+    </header>
+
+    <nav id="navigation">
+    
+        <div><a href="#">HOME</a></div>
+        <div><a href="#portfolio">PORTFOLIO</a></div>
+        <div><a href="#contactID">CONTACT</a></div>     
+    </nav>
+    
+    <main id="portfolio">
+        
+        <div class="profile">
+            <img src="images/responsive-layout-profile.png" alt="Profile Image" class="profile-img" id="profile" onclick="openProfile()">
+            <p> Hi! I'm a front-end developer who loves responsive designs and css. I recently finished a degree in front-end web development
+                at Treehouse and am excited to put all my skills to use! </p>
+        </div>       
+
+        <h3 class="portfolio">PORTFOLIO</h3>
+        <div class="aside">
+        <div class="portfolio">
+            <img src="images/portfolio-1.png" alt="Marketing page" class="portfolio" id="marketing" onclick="openMarketing()" >
+            <h3>Marketing Page</h3>
+            <p>This porject shows he front page of a marketing websitemeant for a specific business I'm interested in.</p>
+        </div>
+        <div class="portfolio">
+            <img src="images/portfolio-2.png" alt="Search Pag" class="portfolio" id="searchPage" onclick="openSearchPage()">
+            <h3>Search Page</h3>
+            <p>This porject searches through a specific database to find information that the user is trying to look up.</p>
+        </div>
+        <div class="portfolio">
+            <img src="images/portfolio-3.png" alt="Travel App" class="portfolio" id="travelApp" onclick="openTravelApp()">
+            <h3>Travel App</h3>
+            <p>This porject compares travel times based on different transportation methods and tells you the best one.</p>
+        </div>
+        <div class="portfolio">
+            <img src="images/portfolio-4.png" alt="Map of Favorite Spots" class="portfolio" id="favoriteSpots" onclick="openFavoriteSpots()">
+            <h3>Map of Favorite Spots</h3>
+            <p>This porject uses mapping apis to plot points to my favorite spots in the city for a do-it-yourself walking tour.</p>
+        </div>
+        <div class="portfolio">
+            <img src="images/portfolio-5.png" alt="Photo Gallery" class="portfolio" id="photoGallery" onclick="openPhotoGallery()">
+            <h3>Photo Gallery</h3>
+            <p>This porject shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+        </div>
+        <div class="portfolio">
+            <img src="images/portfolio-6.png" alt="Calculator" class="portfolio" id="calculator" onclick="openCalculator()">
+            <h3>Calculator</h3>
+            <p>Someone can enter the numbers they want, and press the big blue button and get the result.</p>
+        </div>
+        </div>
+
+        <div class="contact" id="contactID">
+            <h3>CONTACT</h3>
+            <p> If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you. </p>
+            <a href="tel:+11115551234"> phone:	  +1(111)555-1234 <br/></a>
+            <a href="mailto:email@yoursite.com">email:	email@yoursite.com <br/> </a>
+        </div>
+
+    </main>
+    
+    <footer>
+        <a href="#StudentName">Student name</a>
+        <a href="#navigation">Back to Top</a>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+</body> 
+</html>
